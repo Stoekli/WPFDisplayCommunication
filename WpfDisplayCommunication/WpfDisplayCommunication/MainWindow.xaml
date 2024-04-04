@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfDisplayCommunication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ScottPlot="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
+        Title="Display Control" Height="500" Width="550">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBox x:Name="txtDisplayText" Text="Enter Number" Margin="0,0,0,10" PreviewTextInput="txtDisplayText_PreviewTextInput"/>
+            <CheckBox x:Name="chkBlink" Content="Blink" Margin="0,0,0,10"/>
+            <Button Content="Display Text" Click="Button_Click" Margin="0,10,0,0"/>
+            <TextBlock x:Name="txtDisplayCommand" Margin="0,10,0,0" FontSize="16"/>
+            <TextBlock Text="{Binding Temperatur1}" Margin="0,10,0,0" FontSize="16"/>
+            <ScottPlot:WpfPlot x:Name="formsPlot1" MinHeight="300" MinWidth="300"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
